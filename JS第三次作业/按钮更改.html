@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style:none;
+        }
+        .color {
+            display: none;
+        }
+        .sizes {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="b1">颜色更改</button>
+    <ul class="color">
+        <li><button class="blue">blue</button></li>
+        <li><button class="green">green</button></li>
+        <li><button class="red">red</button></li>
+    </ul>
+    <button class="b2">大小更改</button>
+    <ul class="sizes">
+        <li><button class="small">10px</button></li>
+        <li><button  class="center">20px</button></li>
+        <li><button class="big">30px</button></li>
+    </ul>
+    <script>
+        var b1 = document.querySelector('.b1');
+        var color = document.querySelector('.color');
+        var red = document.querySelector('.red');
+        var green = document.querySelector('.green');
+        var blue = document.querySelector('.blue');
+        var b2 = document.querySelector('.b2');
+        var sizes = document.querySelector('.sizes');
+        var small = document.querySelector('.small');
+        var center = document.querySelector('.center');
+        var big = document.querySelector('.big');
+        var all = document.querySelectorAll('button');
+        /*b1.addEventListener = ('click',function() {
+            color.style.display = 'block';
+        })*/
+        b1.onclick = function() {
+            color.style.display = 'block';
+            red.onclick = function() {
+                document.body.style.backgroundColor = 'red';
+            }
+            green.onclick = function() {
+                document.body.style.backgroundColor = 'green';
+            }
+            blue.onclick = function() {
+                document.body.style.backgroundColor = 'blue';
+            }
+        }
+        b2.onclick = function() {
+            sizes.style.display = 'block';
+            small.onclick = function() {
+                for (var i = 0;i < all.length;i++) {
+                    all[i].style.fontSize = '10px';
+                }
+            }
+            center.onclick = function() {
+                for (var i = 0;i < all.length;i++) {
+                    all[i].style.fontSize = '20px';
+                }
+            }
+            big.onclick = function() {
+                for (var i = 0;i < all.length;i++) {
+                    all[i].style.fontSize = '30px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
