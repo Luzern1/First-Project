@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.body {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #005198;
+    color: #fff;
+}
+.city {
+    font-size: 22px;
+    text-align: center;
+}
+.city span:hover {
+    cursor: pointer;
+}
+.head {
+    margin-top: 20px;
+    position: relative;
+}
+.head a{
+    width: 160px;
+    height: 50px;
+    background-color: #2a5c8c;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    border-radius: 25px;
+}
+.head .a1 {
+    left: 50px;
+}
+.head .a2 {
+    right: 50px;
+}
+.head img{
+    width: 40px;
+    height: 40px;
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+header {
+    height: 120px;
+}
+.info {
+    height: 220px;
+    position: relative;
+}
+.info-detail em {
+    font-size: 70px;
+}
+.info-detail,.info-situation {
+    position: absolute;
+    bottom: 10px;
+}
+.info-detail {
+    left: 20px;
+}
+.info-situation {
+    right: 20px;
+}
+.info-situation li {
+    list-style: none;
+}
+.info-situation a {
+    width: 160px;
+    height: 60px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2a5c8c;
+    font-size: 20px;
+    border-radius: 30px;
+}
+.info-situation a img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.tem-wind {
+    height: 30px;
+    background-color: #1d61a1;
+    border-bottom: 1px solid #3070aa;
+    border-top: 1px solid #3070aa;
+}
+.week-weather {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    margin-left: 60px;
+    height: 160px;
+}
+.week-weather li {
+    display: inline-block;
+    width: 110px;
+}
+.week-weather li:first-child {
+    margin-left: -20px;
+    margin-right: 150px;
+}
+.week-weather li:nth-child(3) {
+    margin-left: 150px;
+}
+.week-weather li em,.week-weather li strong,.week-weather li .wea dd,.week-weather li .wind dd {
+    margin-bottom: 5px;
+}
+.week-weather li em {
+    margin-left: -18px;
+}
+.week-weather li .wind dd {
+    margin-left: 0px;
+}
+.condition li {
+    display: inline-block;
+    width: 262px;
+    height: 200px;
+    border-top: 1px solid #1d61a1;
+    border-bottom: 1px solid #1d61a1;
+    border-right: 1px solid #1d61a1;
+}
+.condition li img {
+    width: 50px;
+    height: 50px;
+}
+.condition li span {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+}
+.condition li em {
+    display: block;
+    text-align: center;
+}
+.footer {
+    margin-top: 30px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 700;
+}
+/* 切换城市 */

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level4</title>
+    <link rel="stylesheet" href="level4.css">
+    <script src="D:\study\新建文件夹\jquery.min.js"></script>
+    <script src="./level4.js"></script>
+    <script src="./template-web.js"></script>
+</head>
+
+<body>
+    <div class="body">
+        <!-- 头部 -->
+        <header>
+            <div class="city"><span id="btn">+</span> &nbsp; 西安市</div>
+            <div class="head">
+                <a href="" class="a1">
+                    <img src="./level4imgs/2.png" alt="">
+                    疫情资讯
+                </a>
+                <a href="" class="a2">
+                    <img src="./level4imgs/1.png" alt="">
+                    安全出行
+                </a>
+            </div>
+        </header>
+        <!-- 实时信息 -->
+        <div class="info">
+            <div class="info-detail" id="info">
+                <script type="text/html" id="tpl-info">
+                    {{each}}
+                    {{if $index=='now'}}
+                <p>实时天气：&nbsp;{{$value.text}}</p>
+                <em>{{$value.temp}}°</em>
+                <p>{{$value.windDir}}{{$value.windScale}}级&nbsp;湿度{{$value.humidity}}%</p>
+                {{/if}}
+                {{/each}}
+            </script>
+            </div>
+            <div class="info-situation" id="situation">
+                <script type="text/html" id="tpl-sit">
+                <ul>
+                    {{each warning}}
+                    <li>
+                        <a href="">
+                            <span>
+                                <img src="./level4imgs/4.png" alt="">
+                                <strong>{{$value.typeName}}&nbsp;{{$value.level}}</strong>
+                            </span>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </script>
+            </div>
+        </div>
+        <div class="tem-wind">
+        </div>
+        <!-- 最近天气 -->
+        <div class="week-weather" id="weather">
+            <!-- <canvas class="week_line" id="weekLine" width="710" height="246"></canvas> -->
+            <script type="text/html" id="tpl-wee">
+            <ul>
+                {{each daily}}
+                <li data-high="-1" data-low="-4">
+                    <em>{{$value.fxDate}}</em>
+                    <dl class="wea">
+                        <dd><strong>{{$value.textDay}} &nbsp;{{$value.tempMin}}°</strong></dd>
+                        <dt><img src="" alt="" /></dt>
+                    </dl>
+                    <div></div>
+                    <dl class="wea">
+                        <dt><img src="" alt="" /></dt>
+                        <dd><strong>{{$value.textNight}} &nbsp;{{$value.tempMax}}°</strong></dd>
+                    </dl>
+                    <dl class="wind">
+                        <dd>{{$value.windDirDay}}</dd>
+                        <dd>{{$value.windScaleDay}}级</dd>
+                    </dl>
+                </li>
+               {{/each}}
+            </ul>
+            </script>
+        </div>
+        <!-- 天气指数 -->
+        <div class="condition" id="condition">
+            <script type="text/html" id="tpl-con">
+            <ul>
+                {{each daily}}
+                <li>
+                    <span>
+                        <img src="./level4imgs/default.png">
+                    </span>
+                    <em>{{$value.name}}:&nbsp;{{$value.category}}</em>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            本页面由<em>墨迹天气</em>提供
+        </div>
+    </div>
+</body>
+
+</html>

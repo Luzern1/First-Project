@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ● 用箭头表示其前后的两次输出之间有 1 秒的时间间隔，而逗号表示其前后的两次输出之间的时间间隔可以忽略，代码实际运行的结果该如何描述？
+    ● 改造上述代码，实现输出变成：5 -> 0,1,2,3,4，（即第 1 个 5 直接输出，1 秒之后，输出 0，1，2，3，4）-->
+    <script>
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function (j) {
+                console.log(j);
+            }, 1000,i);
+        }
+        console.log(i);
+    </script>
+
+    <!-- ● 改造代码，实现代码执行时，立即输出 0，之后每隔 1 秒依次输出 1,2,3,4,5。且要求原有的代码块中的循环和两处 console.log 不变。 -->
+    <!-- <script>
+        for (var i = 0; i < 5; i++) {
+            (function(j) {
+                setTimeout(function () {
+                console.log(j);
+            }, 1000*j);
+            })(i)
+        }
+        setTimeout(function() {
+            console.log(i);            
+        }, 1000*i); -->
+    </script>
+</body>
+
+</html>
