@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="D:\study\新建文件夹\jquery.min.js"></script>
+    <script src="./songlist.js"></script>
+    <script src="./template-web.js"></script>
+    <link rel="stylesheet" href="songlist.css">
+</head>
+
+<body>
+    <ul id="songlist">
+        <script type="text/html" id="tpl-song">
+            {{each result}}
+            <li class="item">
+                <div class="add">&nbsp;{{$value.playCount}}万</div>
+                <img src="{{$value.picUrl}}" alt="">
+                <span>{{$value.name}}</span>
+            </li>
+            {{/each}}
+        </script>
+    </ul>
+</body>
+
+</html>
